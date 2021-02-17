@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const List = ({ data }) => {
   if (!data) {
@@ -13,6 +13,14 @@ const List = ({ data }) => {
       ))}
     </ul>
   );
+};
+
+List.propTypes = {
+  data: PropTypes.arrayOf(PropTypes.string),
+};
+
+List.defaultProps = {
+  data: null,
 };
 
 export default List;

@@ -1,21 +1,6 @@
-/* eslint-disable no-unused-expressions */
 import React from 'react';
+import { getCatsByGender } from './utils/getCats';
 import List from './components/ui/List';
-import { PEOPLE } from './mocks/data';
-
-const getCatsByGender = (gender) => {
-  const petsByGender = PEOPLE.filter((item) => item.gender === gender);
-
-  const cats = petsByGender.reduce((pets, people) => {
-    people.pets &&
-      people.pets.forEach((pet) => {
-        pet.type === 'Cat' && pets.push(pet.name);
-      });
-    return pets;
-  }, []);
-
-  return cats.sort();
-};
 
 const App = () => (
   <div>
