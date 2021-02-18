@@ -5,14 +5,11 @@ import Container from './components/ui/Container';
 
 const App = () => (
   <Container>
-    <div>
-      <h2>Male</h2>
-      <List data={getCatsByGender('Male')} />
-    </div>
-    <div>
-      <h2>Female</h2>
-      <List data={getCatsByGender('Female')} />
-    </div>
+    <h2>Male</h2>
+    <List data={getCatsByGender('Male')} />
+
+    <h2>Female</h2>
+    <List data={getCatsByGender('Female')} />
   </Container>
 );
 
